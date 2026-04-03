@@ -24,6 +24,27 @@ To create a Python program that:
 ## Program
 Add Code Here
 
+
+from queue import LifoQueue
+def create_stack():
+    stack = LifoQueue(maxsize=5)
+    n = int(input())  
+    for _ in range(n):
+        value = int(input())
+        if not stack.full():
+            stack.put(value)
+    print(stack.full())
+    temp = []
+    while not stack.empty():
+        temp.append(stack.get())
+
+    for val in temp:
+        print(val)
+create_stack()
+
 ## 🧪 Sample Input and Output
+<img width="567" height="433" alt="image" src="https://github.com/user-attachments/assets/d325d01b-0ac0-47dc-b82e-85e4552a89e9" />
 
 ## Result:
+
+The Program was executed successfully
